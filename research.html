@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Research and projects by Sandeep Sharma — M.Tech theses on VLMs and LLM-driven RL control, plus computer-vision and generative-AI work." />
+  <meta name="theme-color" content="#0a0c12" />
+  <title>Research — Sandeep Sharma</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235b8cff'/><text x='50' y='70' font-size='52' font-family='Arial' font-weight='bold' fill='%23081020' text-anchor='middle'>SS</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    /* No-flash theme: apply saved theme before first paint */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announce" id="announce" role="region" aria-label="Highlight">
+    <div class="container announce__inner">
+      <span class="announce__pulse" aria-hidden="true"></span>
+      <span class="announce__tag"><i data-lucide="sparkles"></i> Highlight</span>
+      <span class="announce__text">Actively seeking <strong>PhD opportunities</strong> in LLMs + Vision, with a focus on RL &amp; control.</span>
+      <button class="announce__close" id="announceClose" aria-label="Dismiss highlight"><i data-lucide="x"></i></button>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand"><span class="brand__mark">SS</span><span class="brand__name">Sandeep&nbsp;Sharma</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="experience.html" class="nav__link">Experience</a>
+        <a href="research.html" class="nav__link">Research</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/sandy283" target="_blank" rel="noopener" class="icon-link desktop-only" aria-label="GitHub"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://www.linkedin.com/in/sandeep-sharma-7248a4227/" target="_blank" rel="noopener" class="icon-link desktop-only" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a href="assets/Sandeep_Sharma_CV.pdf" target="_blank" rel="noopener" class="btn btn--sm btn--primary"><i data-lucide="file-text"></i> Resume</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme"><i data-lucide="moon" class="i-moon"></i><i data-lucide="sun" class="i-sun"></i></button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="page-hero__kicker"><i data-lucide="flask-conical"></i> Research &amp; Projects</span>
+        <h1>Research &amp; selected projects</h1>
+        <p class="page-hero__lead">Ongoing M.Tech theses and a selection of completed research — across vision-language models, reinforcement learning and computer vision.</p>
+      </div>
+    </section>
+
+    <!-- ===== THESES ===== -->
+    <section class="section" style="padding-top:8px;">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker"><i data-lucide="scroll-text"></i> Ongoing</span>
+          <h2 class="section__title">Master's theses</h2>
+        </div>
+        <div class="proj-grid">
+          <article class="card proj reveal">
+            <div class="proj__top">
+              <div class="proj__icon"><i data-lucide="languages"></i></div>
+              <span class="badge badge--progress"><span class="badge__dot"></span> In progress</span>
+            </div>
+            <h3 class="proj__title">Cultural Transcreation with VLMs</h3>
+            <p class="proj__meta">Thesis I · Dr. Pawan Goyal · IIT Kharagpur</p>
+            <p class="proj__desc">Transcreating cultural content across languages and cultures using <strong>vision-language models</strong> — going beyond literal translation to preserve meaning, context and cultural nuance.</p>
+            <div class="tag-row"><span class="tag">VLMs</span><span class="tag">Multimodal</span><span class="tag">NLP</span></div>
+          </article>
+
+          <article class="card proj reveal">
+            <div class="proj__top">
+              <div class="proj__icon"><i data-lucide="bot"></i></div>
+              <span class="badge badge--progress"><span class="badge__dot"></span> In progress</span>
+            </div>
+            <h3 class="proj__title">Continuous RL Control via LLMs</h3>
+            <p class="proj__meta">Thesis II · jointly with Ericsson Research</p>
+            <p class="proj__desc">Using large language models as reasoning controllers for <strong>continuous reinforcement-learning</strong> tasks — connecting language-model priors with control to improve adaptability and sample efficiency.</p>
+            <div class="tag-row"><span class="tag">Reinforcement Learning</span><span class="tag">LLMs</span><span class="tag">Control</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== PUBLICATIONS ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker"><i data-lucide="file-text"></i> Publications</span>
+          <h2 class="section__title">Papers</h2>
+        </div>
+        <article class="card proj reveal" style="max-width:760px;">
+          <div class="proj__top">
+            <div class="proj__icon"><i data-lucide="book-marked"></i></div>
+            <span class="badge badge--progress"><span class="badge__dot"></span> In progress</span>
+          </div>
+          <h3 class="proj__title">Research papers under preparation</h3>
+          <p class="proj__desc">Manuscripts based on my thesis work — cultural transcreation with VLMs and LLM-driven continuous RL control — are currently <strong>in progress</strong>. Titles, venues and links will be added here as they become available.</p>
+          <div class="tag-row"><span class="tag">VLMs</span><span class="tag">LLMs</span><span class="tag">Reinforcement Learning</span></div>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker"><i data-lucide="folder-git-2"></i> Selected work</span>
+          <h2 class="section__title">Research projects</h2>
+        </div>
+        <div class="proj-grid">
+          <article class="card proj reveal">
+            <div class="proj__top"><div class="proj__icon"><i data-lucide="scan-search"></i></div></div>
+            <h3 class="proj__title">Adversarial Multi-Scale Anomaly Detection</h3>
+            <p class="proj__meta">Dr. Ye Zhu · Deakin University</p>
+            <p class="proj__desc">Multi-scale anomaly detection with a student–teacher network and feature pyramids, reaching <strong>0.98+ AUC</strong> on MVTec-AD. A ResNeXt-50 backbone with adversarial training improved precision by 15%, with ROC &gt; 0.98 across all categories.</p>
+            <div class="tag-row"><span class="tag">Anomaly Detection</span><span class="tag">Student–Teacher</span><span class="tag">ResNeXt-50</span></div>
+          </article>
+
+          <article class="card proj reveal">
+            <div class="proj__top"><div class="proj__icon"><i data-lucide="trees"></i></div></div>
+            <h3 class="proj__title">Drone-Image Acacia Detection with GANs</h3>
+            <p class="proj__meta">Dr. Daphne T. C. Lai · Univ. of Brunei</p>
+            <p class="proj__desc">Automated acacia-tree detection from drone imagery using a conditional GAN with an attention-based U-Net. Multi-scale patch extraction and HSI features, with a residual-attention U-Net discriminator, achieved a best-in-class <strong>95.73% mIoU</strong>.</p>
+            <div class="tag-row"><span class="tag">Conditional GAN</span><span class="tag">Attention U-Net</span><span class="tag">Segmentation</span></div>
+          </article>
+
+          <article class="card proj reveal">
+            <div class="proj__top"><div class="proj__icon"><i data-lucide="shield-check"></i></div></div>
+            <h3 class="proj__title">AI4PACE — Securing AI Agents</h3>
+            <p class="proj__meta">IBM Research</p>
+            <p class="proj__desc">A policy automation &amp; compliance engine using Policy-Aware ReAct agents, RBAC, and a Rego code generator with Agentic-RAG to validate and enforce LLM compliance. <em>(PPO received)</em></p>
+            <div class="tag-row"><span class="tag">Agentic AI</span><span class="tag">OPA / Rego</span><span class="tag">Compliance</span></div>
+          </article>
+
+          <article class="card proj reveal">
+            <div class="proj__top"><div class="proj__icon"><i data-lucide="network"></i></div></div>
+            <h3 class="proj__title">Symphony — Multi-Agent Data Analysis</h3>
+            <p class="proj__meta">Western Digital</p>
+            <p class="proj__desc">A multi-agent architecture over 45 tables combining LLMs with ML/DL. A Forest-of-Thoughts framework reached <strong>85%</strong> query accuracy and <strong>95%</strong> pipeline success, with an automated SQL agent for what-if analysis.</p>
+            <div class="tag-row"><span class="tag">Multi-Agent</span><span class="tag">Text-to-SQL</span><span class="tag">Forest of Thoughts</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <!-- ===== GITHUB ===== -->
+    <section class="section" id="github">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="section__kicker"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> Open Source</span>
+          <h2 class="section__title">From my GitHub</h2>
+          <p class="section__intro">A selection of public repositories — spanning generative AI, computer vision, interpretability and classic ML.</p>
+        </div>
+        <div class="repo-grid">
+          <a class="card repo reveal" href="https://github.com/sandy283/gen_ai" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="sparkles"></i><span class="repo__name">gen_ai</span></div>
+            <p class="repo__desc">Generative-AI experiments and prototypes.</p>
+            <div class="repo__foot"><span class="repo__lang">Python</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/pix2pix" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="image"></i><span class="repo__name">pix2pix</span></div>
+            <p class="repo__desc">Conditional GAN for image-to-image translation.</p>
+            <div class="repo__foot"><span class="repo__lang">Jupyter</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/LSTM_with_LIME" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="search-check"></i><span class="repo__name">LSTM_with_LIME</span></div>
+            <p class="repo__desc">Interpretable LSTM predictions explained with LIME.</p>
+            <div class="repo__foot"><span class="repo__lang">Python</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/UBD_Computer_Vision" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="eye"></i><span class="repo__name">UBD_Computer_Vision</span></div>
+            <p class="repo__desc">Computer-vision work from the Univ. of Brunei collaboration.</p>
+            <div class="repo__foot"><span class="repo__lang">Jupyter</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/Time-Series-Analysis-and-Prediction-of-Stock-Prices" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="trending-up"></i><span class="repo__name">Time-Series Stock Prediction</span></div>
+            <p class="repo__desc">Time-series analysis &amp; forecasting of stock prices.</p>
+            <div class="repo__foot"><span class="repo__lang">Jupyter</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/LLM-based-RECOMMENDATION-ENGINE" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="wand-2"></i><span class="repo__name">LLM Recommendation Engine</span></div>
+            <p class="repo__desc">A recommendation engine powered by large language models.</p>
+            <div class="repo__foot"><span class="repo__lang">Python</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/Traffic-Sign-Classifier" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="traffic-cone"></i><span class="repo__name">Traffic-Sign-Classifier</span></div>
+            <p class="repo__desc">Traffic-sign classification &amp; recognition with CNNs.</p>
+            <div class="repo__foot"><span class="repo__lang">Jupyter</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/Face-Mask-Detection" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="scan-face"></i><span class="repo__name">Face-Mask-Detection</span></div>
+            <p class="repo__desc">Face-mask detection using convolutional neural networks.</p>
+            <div class="repo__foot"><span class="repo__lang">Jupyter</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+          <a class="card repo reveal" href="https://github.com/sandy283/ESRGAN" target="_blank" rel="noopener">
+            <div class="repo__head"><i data-lucide="maximize"></i><span class="repo__name">ESRGAN</span></div>
+            <p class="repo__desc">Enhanced super-resolution GAN for image upscaling.</p>
+            <div class="repo__foot"><span class="repo__lang">Python</span><i data-lucide="arrow-up-right" class="repo__arrow"></i></div>
+          </a>
+        </div>
+        <div class="center-cta reveal">
+          <a href="https://github.com/sandy283?tab=repositories" target="_blank" rel="noopener" class="btn btn--ghost"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> View all 26 repositories</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="foot-brand">
+          <a href="index.html" class="brand"><span class="brand__mark">SS</span><span class="brand__name">Sandeep Sharma</span></a>
+          <p>AI / ML Researcher — LLMs, computer vision &amp; reinforcement learning. IIT Kharagpur, Class of 2026.</p>
+        </div>
+        <div class="foot-col">
+          <h5>Navigate</h5>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="research.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Elsewhere</h5>
+          <a href="https://github.com/sandy283" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sandeep-sharma-7248a4227/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:suraj986847@gmail.com">Email</a>
+          <a href="assets/Sandeep_Sharma_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© <span id="year"></span> Sandeep Sharma. All rights reserved.</p>
+        <div class="foot-socials">
+          <a href="https://github.com/sandy283" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="https://www.linkedin.com/in/sandeep-sharma-7248a4227/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+          <a href="mailto:suraj986847@gmail.com" class="icon-link" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

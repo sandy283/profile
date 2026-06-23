@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Experience of Sandeep Sharma — research and engineering roles at Ericsson, IBM, Western Digital, Tecnod8.ai, Deakin University and more." />
+  <meta name="theme-color" content="#0a0c12" />
+  <title>Experience — Sandeep Sharma</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235b8cff'/><text x='50' y='70' font-size='52' font-family='Arial' font-weight='bold' fill='%23081020' text-anchor='middle'>SS</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    /* No-flash theme: apply saved theme before first paint */
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announce" id="announce" role="region" aria-label="Highlight">
+    <div class="container announce__inner">
+      <span class="announce__pulse" aria-hidden="true"></span>
+      <span class="announce__tag"><i data-lucide="sparkles"></i> Highlight</span>
+      <span class="announce__text">Actively seeking <strong>PhD opportunities</strong> in LLMs + Vision, with a focus on RL &amp; control.</span>
+      <button class="announce__close" id="announceClose" aria-label="Dismiss highlight"><i data-lucide="x"></i></button>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="index.html" class="brand"><span class="brand__mark">SS</span><span class="brand__name">Sandeep&nbsp;Sharma</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="experience.html" class="nav__link">Experience</a>
+        <a href="research.html" class="nav__link">Research</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="https://github.com/sandy283" target="_blank" rel="noopener" class="icon-link desktop-only" aria-label="GitHub"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+        <a href="https://www.linkedin.com/in/sandeep-sharma-7248a4227/" target="_blank" rel="noopener" class="icon-link desktop-only" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+        <a href="assets/Sandeep_Sharma_CV.pdf" target="_blank" rel="noopener" class="btn btn--sm btn--primary"><i data-lucide="file-text"></i> Resume</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" title="Toggle theme"><i data-lucide="moon" class="i-moon"></i><i data-lucide="sun" class="i-sun"></i></button>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="container reveal">
+        <span class="page-hero__kicker"><i data-lucide="briefcase"></i> Experience</span>
+        <h1>Where I've researched &amp; built</h1>
+        <p class="page-hero__lead">Ten research and engineering roles across industry and academia — from frontier LLMs and agentic systems to computer vision and reinforcement learning.</p>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section class="section" style="padding-top:8px;">
+      <div class="container">
+        <div class="timeline">
+
+          <!-- Ericsson (current) -->
+          <article class="tl-item tl-item--current reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Research Intern <span class="pill-now">Now</span></h3>
+                  <p class="tl-org">Ericsson Research · Bengaluru · On-site</p>
+                </div>
+                <span class="tl-date">Dec 2025 – Present</span>
+              </div>
+              <p class="tl-summary">Working with the Ericsson Research team on <strong>continuous RL control via LLMs</strong> (joint M.Tech thesis).</p>
+              <ul class="tl-points">
+                <li>Exploring large language models as controllers/policies for continuous reinforcement-learning tasks.</li>
+                <li>Bridging language-model reasoning with classical control to improve adaptability and sample efficiency.</li>
+              </ul>
+              <div class="tag-row"><span class="tag">Reinforcement Learning</span><span class="tag">LLMs</span><span class="tag">Control</span></div>
+            </div>
+          </article>
+
+          <!-- Western Digital -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Data Science Intern</h3>
+                  <p class="tl-org">Western Digital · Bengaluru · Remote</p>
+                </div>
+                <span class="tl-date">Aug 2025</span>
+              </div>
+              <p class="tl-summary">Built <strong>“Symphony”</strong> — a multi-agent architecture combining LLMs with ML/DL for enterprise data analysis.</p>
+              <ul class="tl-points">
+                <li>Architected a multi-agent system over 45 tables, bypassing token limits and cutting LLM cost via preprocessing.</li>
+                <li>Implemented a Forest-of-Thoughts framework — 85% query accuracy, 95% success across a 5-module pipeline.</li>
+                <li>Built an automated SQL agent with dynamic query generation (ranking, what-if scenarios) for manufacturing metrics.</li>
+              </ul>
+              <div class="tag-row"><span class="tag">Multi-Agent</span><span class="tag">Text-to-SQL</span><span class="tag">Forest of Thoughts</span></div>
+            </div>
+          </article>
+
+          <!-- IBM -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Research Intern</h3>
+                  <p class="tl-org">IBM Research · Bengaluru · On-site</p>
+                </div>
+                <span class="tl-date">May 2025 – Jul 2025</span>
+              </div>
+              <p class="tl-summary">Built <strong>AI4PACE</strong> — a Policy Automation &amp; Compliance Engine answering “how do we make AI secure?” <em>(PPO received)</em></p>
+              <ul class="tl-points">
+                <li>Created a Policy-Aware ReAct agent to validate LLM compliance, extended to RBAC policies with roles.</li>
+                <li>Explored DSLs (XACML, OPA) for formal policy; built a Rego code generator with Agentic-RAG.</li>
+                <li>Implemented Policy-Advisor and Validator agents for authoring and synthetic-test-case testing.</li>
+              </ul>
+              <div class="tag-row"><span class="tag">Agentic AI</span><span class="tag">ReAct</span><span class="tag">OPA / Rego</span><span class="tag">Agentic-RAG</span></div>
+            </div>
+          </article>
+
+          <!-- Tecnod8 -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">AI &amp; LLM Lead</h3>
+                  <p class="tl-org">Tecnod8.ai · Full-time · Remote</p>
+                </div>
+                <span class="tl-date">Aug 2024 – Apr 2025</span>
+              </div>
+              <p class="tl-summary">Led <strong>post- &amp; continual-training of LLMs</strong> for domain adaptation in industrial &amp; automation, and built agents for CNC &amp; PLC machines.</p>
+              <ul class="tl-points">
+                <li>Fine-tuned BGE-base embeddings with MNR loss + reranking — RAG hit-rate +7.42%.</li>
+                <li>Width-wise structured pruning of Llama-3.1-8B; continual pre-training to infuse industrial knowledge.</li>
+                <li>Distilled Mistral-Nemo &amp; Llama-70B (KL divergence) — surpassed GPT-4o-mini by 13%.</li>
+                <li>LoRA fine-tuned CodeGemma-7B for PLC/CNC code — Prometheus score +27%.</li>
+                <li>Built a multimodal model merging a Qwen2.5-VL encoder with Llama to turn 2D sketches into flows.</li>
+              </ul>
+              <div class="tag-row"><span class="tag">LLM Post-Training</span><span class="tag">Distillation</span><span class="tag">Pruning</span><span class="tag">RAG</span><span class="tag">Agents</span><span class="tag">Multimodal</span></div>
+            </div>
+          </article>
+
+          <!-- Ericsson 2024 -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">AI Research Intern</h3>
+                  <p class="tl-org">Ericsson Research · Kolkata · Hybrid</p>
+                </div>
+                <span class="tl-date">May 2024 – Jul 2024</span>
+              </div>
+              <p class="tl-summary">Developed &amp; benchmarked causal-discovery methods for <strong>reinforcement-learning</strong> environments.</p>
+              <ul class="tl-points">
+                <li>Benchmarked 8+ causal-discovery algorithms — 95% TPR with DAG-GNN, 60% SHD reduction on Asia.</li>
+                <li>Enhanced DAG-GNN &amp; GAE with prior-knowledge loss injection: FDR 0.4 → 0.16, TPR +25%.</li>
+                <li>Compared random-action vs trained (DQN/SAC) graphs — reducing the need for policy training.</li>
+              </ul>
+              <div class="tag-row"><span class="tag">Reinforcement Learning</span><span class="tag">Causal Inference</span><span class="tag">DAG-GNN</span></div>
+            </div>
+          </article>
+
+          <!-- Deakin -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Research Intern</h3>
+                  <p class="tl-org">Deakin University · with Dr. Ye Zhu</p>
+                </div>
+                <span class="tl-date">Mar 2024 – Jul 2024</span>
+              </div>
+              <p class="tl-summary">Multi-scale <strong>anomaly detection</strong> with a student–teacher network, reaching <strong>0.98+ AUC</strong> on MVTec-AD.</p>
+              <ul class="tl-points">
+                <li>ResNeXt-50 backbone with adversarial training improved precision by 15%.</li>
+                <li>ROC &gt; 0.98 across all categories at both image and pixel level.</li>
+              </ul>
+              <div class="tag-row"><span class="tag">Computer Vision</span><span class="tag">Anomaly Detection</span><span class="tag">GANs</span></div>
+            </div>
+          </article>
+
+          <!-- FormBid -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">ML Intern</h3>
+                  <p class="tl-org">FormBid</p>
+                </div>
+                <span class="tl-date">Mar 2024 – Jun 2024</span>
+              </div>
+              <p class="tl-summary">Computer-vision &amp; AI for <strong>document understanding</strong> — OCR and form-processing pipelines.</p>
+              <div class="tag-row"><span class="tag">Computer Vision</span><span class="tag">OCR</span><span class="tag">Artificial Intelligence</span></div>
+            </div>
+          </article>
+
+          <!-- Universiti Brunei -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Research Intern</h3>
+                  <p class="tl-org">Universiti Brunei Darussalam · with Dr. Daphne T. C. Lai</p>
+                </div>
+                <span class="tl-date">Feb 2024 – Apr 2024</span>
+              </div>
+              <p class="tl-summary">Drone-image <strong>acacia detection</strong> using a conditional GAN + attention U-Net — best-in-class <strong>95.73% mIoU</strong>.</p>
+              <div class="tag-row"><span class="tag">Remote Sensing</span><span class="tag">GANs</span><span class="tag">Segmentation</span><span class="tag">Deep Learning</span></div>
+            </div>
+          </article>
+
+          <!-- YouseAI -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">AI Intern</h3>
+                  <p class="tl-org">YouseAI · Delhi · Remote</p>
+                </div>
+                <span class="tl-date">May 2024</span>
+              </div>
+              <p class="tl-summary">Built <strong>RAG</strong> pipelines with large language models for retrieval-grounded generation.</p>
+              <div class="tag-row"><span class="tag">RAG</span><span class="tag">LLMs</span><span class="tag">NLP</span></div>
+            </div>
+          </article>
+
+          <!-- IIT KGP research -->
+          <article class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="card tl-card">
+              <div class="tl-top">
+                <div>
+                  <h3 class="tl-role">Research Intern</h3>
+                  <p class="tl-org">IIT Kharagpur · Kharagpur</p>
+                </div>
+                <span class="tl-date">Dec 2023 – Feb 2024</span>
+              </div>
+              <p class="tl-summary">Research at the intersection of <strong>LLMs, time-series and cybersecurity</strong>.</p>
+              <div class="tag-row"><span class="tag">LLMs</span><span class="tag">Time Series</span><span class="tag">Cybersecurity</span></div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="center-cta reveal">
+          <a href="assets/Sandeep_Sharma_CV.pdf" target="_blank" rel="noopener" class="btn btn--ghost"><i data-lucide="download"></i> Download full CV (PDF)</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__inner">
+        <div class="foot-brand">
+          <a href="index.html" class="brand"><span class="brand__mark">SS</span><span class="brand__name">Sandeep Sharma</span></a>
+          <p>AI / ML Researcher — LLMs, computer vision &amp; reinforcement learning. IIT Kharagpur, Class of 2026.</p>
+        </div>
+        <div class="foot-col">
+          <h5>Navigate</h5>
+          <a href="about.html">About</a>
+          <a href="experience.html">Experience</a>
+          <a href="research.html">Research</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="foot-col">
+          <h5>Elsewhere</h5>
+          <a href="https://github.com/sandy283" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sandeep-sharma-7248a4227/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:suraj986847@gmail.com">Email</a>
+          <a href="assets/Sandeep_Sharma_CV.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>© <span id="year"></span> Sandeep Sharma. All rights reserved.</p>
+        <div class="foot-socials">
+          <a href="https://github.com/sandy283" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222 0 1.606-.014 2.898-.014 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+          <a href="https://www.linkedin.com/in/sandeep-sharma-7248a4227/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+          <a href="mailto:suraj986847@gmail.com" class="icon-link" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
