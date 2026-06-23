@@ -28,16 +28,6 @@
   </script>
 </head>
 <body>
-  <!-- ===== ANNOUNCEMENT BAR ===== -->
-  <div class="announce" id="announce" role="region" aria-label="Highlight">
-    <div class="announce__inner">
-      <span class="announce__pulse" aria-hidden="true"></span>
-      <span class="announce__tag"><i data-lucide="sparkles"></i> Highlight</span>
-      <span class="announce__text">Actively seeking <strong>PhD opportunities</strong> in LLMs + Vision, with a focus on RL &amp; control.</span>
-      <button class="announce__close" id="announceClose" aria-label="Dismiss highlight"><i data-lucide="x"></i></button>
-    </div>
-  </div>
-
   <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="container site-header__inner">
@@ -71,6 +61,17 @@
       </div>
     </div>
   </header>
+
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announce" id="announce" role="region" aria-label="Highlight">
+    <div class="announce__inner">
+      <span class="announce__pulse" aria-hidden="true"></span>
+      <span class="announce__badge-new">NEW</span>
+      <span class="announce__tag"><i data-lucide="sparkles"></i> Highlight</span>
+      <span class="announce__text">Actively seeking <strong>PhD opportunities</strong> in LLMs + Vision, with a focus on RL &amp; control.</span>
+      <button class="announce__close" id="announceClose" aria-label="Dismiss highlight"><i data-lucide="x"></i></button>
+    </div>
+  </div>
 
   <main>
     <!-- ===== HERO ===== -->
