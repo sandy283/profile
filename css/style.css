@@ -159,7 +159,7 @@ main { flex: 1 0 auto; }
   color: var(--on-accent); background: var(--accent); padding: 5px 12px; border-radius: 999px; font-weight: 600;
 }
 .announce__tag i { width: .85em; height: .85em; }
-.announce__text { color: var(--text); font-size: 1.18rem; line-height: 1.4; font-weight: 500; }
+.announce__text { color: var(--text); font-size: 1.4rem; line-height: 1.4; font-weight: 500; }
 .announce__text strong { color: var(--accent); font-weight: 600; }
 .announce__pulse { width: 7px; height: 7px; border-radius: 50%; background: #46d39a; box-shadow: 0 0 0 0 rgba(70,211,154,.6); animation: pulse 2.4s infinite; flex-shrink: 0; }
 .announce__close {
